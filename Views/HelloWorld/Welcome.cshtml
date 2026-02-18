@@ -1,0 +1,17 @@
+<h2>@ViewData["Message"]</h2>
+
+@if (ViewData["NumTimes"] != null && int.TryParse(ViewData["NumTimes"]?.ToString() ?? "", out int numTimes))
+{
+    @for (int i = 0; i < numTimes; i++)
+    {
+        <p>Bienvenido a ASP.NET Core MVC</p>
+    }
+}
+
+
+<!--
+@for (int i = 0; i < (int)ViewData["NumTimes"]; i++)
+{
+    <p>Bienvenido a ASP.NET Core MVC</p>
+}
+-->
